@@ -26,7 +26,6 @@
         "@typescript-eslint/parser": "^8.54.0",
         "eslint": "^9.39.2",
         "eslint-config-airbnb-extended": "^3.0.1",
-        "eslint-config-airbnb-typescript": "^18.0.0",
         "eslint-config-next": "16.1.6",
         "eslint-config-prettier": "^10.1.8",
         "eslint-import-resolver-typescript": "^4.4.4",
@@ -736,11 +735,7 @@
 
     "eslint-compat-utils": ["eslint-compat-utils@0.5.1", "", { "dependencies": { "semver": "^7.5.4" }, "peerDependencies": { "eslint": ">=6.0.0" } }, "sha512-3z3vFexKIEnjHE3zCMRo6fn/e44U7T1khUjg+Hp0ZQMCigh28rALD0nPFBcGZuiLC5rLZa2ubQHDRln09JfU2Q=="],
 
-    "eslint-config-airbnb-base": ["eslint-config-airbnb-base@15.0.0", "", { "dependencies": { "confusing-browser-globals": "^1.0.10", "object.assign": "^4.1.2", "object.entries": "^1.1.5", "semver": "^6.3.0" }, "peerDependencies": { "eslint": "^7.32.0 || ^8.2.0", "eslint-plugin-import": "^2.25.2" } }, "sha512-xaX3z4ZZIcFLvh2oUNvcX5oEofXda7giYmuplVxoOg5A7EXJMrUyqRgR+mhDhPK8LZ4PttFOBvCYDbX3sUoUig=="],
-
     "eslint-config-airbnb-extended": ["eslint-config-airbnb-extended@3.0.1", "", { "dependencies": { "@next/eslint-plugin-next": "^16.1.4", "@stylistic/eslint-plugin": "^5.7.0", "confusing-browser-globals": "^1.0.11", "eslint-import-resolver-typescript": "^4.4.4", "eslint-plugin-import": "^2.32.0", "eslint-plugin-import-x": "^4.16.1", "eslint-plugin-jsx-a11y": "^6.10.2", "eslint-plugin-n": "^17.23.2", "eslint-plugin-react": "^7.37.5", "eslint-plugin-react-hooks": "^7.0.1", "globals": "^17.0.0", "typescript-eslint": "^8.53.1" }, "peerDependencies": { "eslint": "^9.0.0" } }, "sha512-JUVAh/tqLx99AFPmjXl5nalD6wrv6AD2muilieUJZG/uCjc89O93upoIcdB9221fTrcBdZAQ6f1jbyda1vcJ+Q=="],
-
-    "eslint-config-airbnb-typescript": ["eslint-config-airbnb-typescript@18.0.0", "", { "dependencies": { "eslint-config-airbnb-base": "^15.0.0" }, "peerDependencies": { "@typescript-eslint/eslint-plugin": "^7.0.0", "@typescript-eslint/parser": "^7.0.0", "eslint": "^8.56.0" } }, "sha512-oc+Lxzgzsu8FQyFVa4QFaVKiitTYiiW3frB9KYW5OWdPrqFc7FzxgB20hP4cHMlr+MBzGcLl3jnCOVOydL9mIg=="],
 
     "eslint-config-next": ["eslint-config-next@16.1.6", "", { "dependencies": { "@next/eslint-plugin-next": "16.1.6", "eslint-import-resolver-node": "^0.3.6", "eslint-import-resolver-typescript": "^3.5.2", "eslint-plugin-import": "^2.32.0", "eslint-plugin-jsx-a11y": "^6.10.0", "eslint-plugin-react": "^7.37.0", "eslint-plugin-react-hooks": "^7.0.0", "globals": "16.4.0", "typescript-eslint": "^8.46.0" }, "peerDependencies": { "eslint": ">=9.0.0", "typescript": ">=3.3.1" } }, "sha512-vKq40io2B0XtkkNDYyleATwblNt8xuh3FWp8SpSz3pt7P01OkBFlKsJZ2mWt5WsCySlDQLckb1zMY9yE9Qy0LA=="],
 
