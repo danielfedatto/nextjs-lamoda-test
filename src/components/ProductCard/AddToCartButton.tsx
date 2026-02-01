@@ -9,7 +9,7 @@ interface AddToCartButtonProps {
   product: Product;
 }
 
-const AddToCartButton = ({ product }: AddToCartButtonProps) => {
+function AddToCartButton({ product }: AddToCartButtonProps) {
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
@@ -28,6 +28,6 @@ const AddToCartButton = ({ product }: AddToCartButtonProps) => {
       ADD TO CART
     </button>
   );
-};
+}
 
 export default AddToCartButton;

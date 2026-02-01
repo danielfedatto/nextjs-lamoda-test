@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, useMemo, type ReactNode } from 'react';
 
 import type { Product } from '@/features/products/services/normalizeProducts';
 
@@ -26,7 +26,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export const CartProvider = ({ children }: { children: ReactNode }) => {
+export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
 
   const addToCart = useCallback((product: Product) => {
@@ -87,19 +87,22 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <CartContext.Provider
-      value={{
-        items,
-        addToCart,
-        removeFromCart,
-        updateQuantity,
-        clearCart,
-        getTotals,
-      }}
+      value={useMemo(
+        () => ({
+          items,
+          addToCart,
+          removeFromCart,
+          updateQuantity,
+          clearCart,
+          getTotals,
+        }),
+        [items, addToCart, removeFromCart, updateQuantity, clearCart, getTotals],
+      )}
     >
       {children}
     </CartContext.Provider>
   );
-};
+}
 
 export function useCart() {
   const context = useContext(CartContext);

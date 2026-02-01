@@ -1,6 +1,6 @@
 import productsMock from '@/mocks/products.mock.json';
 
-import { getProducts } from './getProducts';
+import getProducts from './getProducts';
 
 describe('getProducts', () => {
   beforeAll(() => {

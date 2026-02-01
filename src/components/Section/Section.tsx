@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 
 import ProductCard from '@/components/ProductCard/ProductCard';
-import { getProducts } from '@/features/products/services/getProducts';
+import getProducts from '@/features/products/services/getProducts';
 import type { Product } from '@/features/products/services/normalizeProducts';
 
-const Section = () => {
+function Section() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -21,11 +21,12 @@ const Section = () => {
     <div className="container">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {extendedProducts.map((product, index) => (
+          // eslint-disable-next-line react/no-array-index-key
           <ProductCard key={`${product.id}-${index}`} product={product} />
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default Section;

@@ -1,4 +1,6 @@
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import { render, screen } from '@testing-library/react';
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import '@testing-library/jest-dom';
 
 import Cart from './Cart';

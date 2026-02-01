@@ -1,3 +1,5 @@
-const Footer = async () => <footer></footer>;
+function Footer() {
+  return <footer />;
+}
 
 export default Footer;

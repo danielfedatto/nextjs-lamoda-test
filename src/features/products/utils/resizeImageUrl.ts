@@ -36,7 +36,7 @@ export function resizeImageUrl(imageUrl: string, width: number, height: number):
  */
 export function generateResponsiveImageUrls(
   imageUrl: string,
-  sizes: Array<{ width: number; height: number }>,
+  sizes: { width: number; height: number }[],
 ): string[] {
   return sizes.map((size) => resizeImageUrl(imageUrl, size.width, size.height));
 }

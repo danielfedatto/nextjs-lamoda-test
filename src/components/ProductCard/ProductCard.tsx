@@ -27,7 +27,7 @@ interface ProductCardProps {
   responsive?: boolean;
 }
 
-const ProductCard = ({ product, imageSize = 'card', responsive = false }: ProductCardProps) => {
+function ProductCard({ product, imageSize = 'card', responsive = false }: ProductCardProps) {
   let finalWidth: number;
   let finalHeight: number;
 
@@ -80,6 +80,11 @@ const ProductCard = ({ product, imageSize = 'card', responsive = false }: Produc
       <AddToCartButton product={product} />
     </div>
   );
+}
+
+ProductCard.defaultProps = {
+  imageSize: 'card',
+  responsive: false,
 };
 
 export default ProductCard;

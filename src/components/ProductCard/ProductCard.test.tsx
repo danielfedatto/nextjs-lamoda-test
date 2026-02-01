@@ -1,4 +1,6 @@
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import { render, screen } from '@testing-library/react';
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import '@testing-library/jest-dom';
 
 import { normalizeProduct } from '@/features/products/services/normalizeProducts';
@@ -17,7 +19,7 @@ jest.mock('next/image', () => ({
 jest.mock('./AddToCartButton', () => ({
   __esModule: true,
   default: ({ product }: { product: { name: string } }) => (
-    <button>Add to Cart - {product.name}</button>
+    <button type="button">Add to Cart - {product.name}</button>
   ),
 }));
 

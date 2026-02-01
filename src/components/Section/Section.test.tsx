@@ -1,7 +1,9 @@
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import { render, screen, waitFor } from '@testing-library/react';
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import '@testing-library/jest-dom';
 
-import { getProducts } from '@/features/products/services/getProducts';
+import getProducts from '@/features/products/services/getProducts';
 
 import Section from './Section';
 
@@ -15,7 +17,8 @@ jest.mock('@/components/ProductCard/ProductCard', () => ({
 
 // Mock getProducts
 jest.mock('@/features/products/services/getProducts', () => ({
-  getProducts: jest.fn(),
+  __esModule: true,
+  default: jest.fn(),
 }));
 
 const mockGetProducts = getProducts as jest.MockedFunction<typeof getProducts>;

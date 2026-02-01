@@ -1,4 +1,4 @@
-import { calculateDiscount } from './calculateDiscount';
+import calculateDiscount from './calculateDiscount';
 
 describe('calculateDiscount', () => {
   it('should return null when oldPrice is null', () => {

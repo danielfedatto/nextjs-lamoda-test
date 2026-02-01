@@ -3,12 +3,12 @@ import productsMock from '@/mocks/products.mock.json';
 import { normalizeProduct, type Product } from './normalizeProducts';
 
 interface MockProductsData {
-  products: Array<{
+  products: {
     name: string;
     listPrice: number;
     price: number;
     image: string;
-  }>;
+  }[];
   totals: {
     productsTotal: number;
     shipping: number;
@@ -17,9 +17,11 @@ interface MockProductsData {
   };
 }
 
-export async function getProducts(): Promise<Product[]> {
+export default async function getProducts(): Promise<Product[]> {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 200));
+    await new Promise<void>((resolve) => {
+      setTimeout(resolve, 200);
+    });
 
     const data = productsMock as MockProductsData;
 

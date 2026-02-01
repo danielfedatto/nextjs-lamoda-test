@@ -1,14 +1,14 @@
-export type CartProduct = {
+export interface CartProduct {
   price: number;
   quantity: number;
-};
+}
 
-export type CartTotals = {
+export interface CartTotals {
   productsTotal: number;
   shipping: number;
   discount: number;
   subtotal: number;
-};
+}
 
 export function calculateCartTotals(
   products: CartProduct[],
